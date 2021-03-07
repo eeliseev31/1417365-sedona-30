@@ -35,9 +35,11 @@ body {
     height: auto;
   }
 
+
  /* Main-navigation */ 
 
-.site-navigation {
+.site-navigation,
+.result-list {
     list-style: none;
 }
 
@@ -135,6 +137,11 @@ body {
 
 /* inner-page */
 
+.catalog-filter {
+background-image: url("img/bg-image.jpg") no-repeat; /*Почему не подключается фон?*/
+    
+}
+
 .show-button {
     font-weight: normal;
     font-size: 14px;
@@ -144,7 +151,95 @@ body {
     border-radius: 2px;
 }
 
+.search-results p {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.sorting-list {
+    list-style: none;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px; 
+}
+
+.sorting-item { /* Спросить про подчеркивание */
+    text-decoration: none;
+    color: #000000;
+    opacity: 0.3;  
+}
+
+.sorting-item:hover {
+    color: #81B3D2;
+    opacity: unset;
+}
+
+.sorting-item:active { /* Спросить почему не работает */
+    color: var(--basic-black);
+       
+}
+
+.sorting-item:focus {
+    color: var(--basic-blue);
+    opacity: 1;
+}
+
+.result-item h3 {
+font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+}
+
+.result-item p {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--light-black)
+}
+
+.result-item a {
+    text-decoration: none;
+    color: var(--basic-black);
+}
+
+.result-item a:hover {
+    color: #81B3D2;
+}
+
+.result-item a:active{
+    color: var(--basic-black)
+    opacity: 1; /* Спросить почему опять не работает... */
+}
+
+.details-button {
+    line-height: 21;
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+}
+
+.details-button:hover {
+    background-color: #669EC0;
+}
+
+.details-button:active { /* Спросить как правильно добавить прозрачность ТОЛЬКО тексту */
+    background-color: #5496BD; 
+}
+
+.book-button {
+    line-height: 21;
+    color: var(--basic-white);
+    background-color: var(--basic-brown);
+}
+
+.book-button:hover {
+    background-color: #604E43;
+}
+
+.book-button:active { /* Спросить как правильно добавить прозрачность ТОЛЬКО тексту */
+    background-color: #503E33;    
+}
 /* main-footer */
+
 
 .main-footer {
     background: rgba(255, 255, 255, 0.9);
