@@ -4,15 +4,17 @@
     --basic-black: #000000;
     --basic-brown: #766357;
     --basic-blue:  #81B3D2;
+    --dark-blue: #669EC0;
+    --darkest-blue: #5496BD; 
     --basic-background: #EEEEEE;
     --light-black: #333333;
-
+   
 }
 
 /* Global */
 
 body {
-    min-width: 960px;
+    width: 1200px;
     margin: 0;
     padding: 0;
     font-family: "PT Sans", Arial, sans-serif;
@@ -24,6 +26,8 @@ body {
     background-color: var(--basic-white);
     background-position: top center;
     background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   a {
@@ -138,8 +142,10 @@ body {
 /* inner-page */
 
 .catalog-filter {
-background-image: url("img/bg-image.jpg") no-repeat; /*Почему не подключается фон?*/
-    
+    width: 1200px;
+    height: 217px;
+    background-image: url("../img/bg-image.jpg");
+    background-repeat: no-repeat;
 }
 
 .show-button {
@@ -164,26 +170,28 @@ background-image: url("img/bg-image.jpg") no-repeat; /*Почему не под�
     line-height: 18px; 
 }
 
-.sorting-item { /* Спросить про подчеркивание */
-    text-decoration: none;
-    color: #000000;
+.sorting-item { 
+    text-decoration: dotted;
+    color: var(--basic-black);
+    border-bottom: 1px dotted var(--basic-blue);
     opacity: 0.3;  
 }
 
 .sorting-item:hover {
-    color: #81B3D2;
+    color: var(--basic-blue);
     opacity: unset;
-}
-
-.sorting-item:active { /* Спросить почему не работает */
-    color: var(--basic-black);
-       
 }
 
 .sorting-item:focus {
     color: var(--basic-blue);
     opacity: 1;
 }
+
+.sorting-item:active { 
+    color: var(--basic-black);
+}
+
+
 
 .result-item h3 {
 font-weight: bold;
@@ -203,12 +211,12 @@ line-height: 26px;
 }
 
 .result-item a:hover {
-    color: #81B3D2;
+    color: var(--basic-blue);
 }
 
 .result-item a:active{
     color: var(--basic-black)
-    opacity: 1; /* Спросить почему опять не работает... */
+    /* opacity: 1; Спросить почему опять не работает... */
 }
 
 .details-button {
@@ -218,11 +226,12 @@ line-height: 26px;
 }
 
 .details-button:hover {
-    background-color: #669EC0;
+    background-color: var(--dark-blue);
 }
 
 .details-button:active { /* Спросить как правильно добавить прозрачность ТОЛЬКО тексту */
-    background-color: #5496BD; 
+    background-color: var(--darkest-blue); 
+    opacity: 0.3;
 }
 
 .book-button {
