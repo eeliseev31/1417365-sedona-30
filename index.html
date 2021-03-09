@@ -16,21 +16,25 @@
 
 <body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation">
-      <ul class="site-navigation">
-        <li><a href="#">Информация</a></li>
-        <li><a href="#">Фото и видео</a></li>
-        <li class="main-logo"><img src="img/main-logo.svg" width="138" height="70" alt="Логотип сайта"></li>
-        <li><a href="#">Карта штата</a></li>
-        <li><a href="catalog.html">Гостиницы</a></li>
-      </ul>
-    </nav>
+    <div class="main-header-bar">
+    <div class="main-navigation-wrapper">
+      <nav class="main-navigation">
+        <a class="main-logo"><img src="img/main-logo.svg" width="138" height="70" alt="Логотип сайта"></a>
+        <ul class="site-navigation">
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="catalog.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
   </header>
 
   <main class="container">
     <section class="welcome-intro">
       <div class="intro">
-        <img class="into-text" src="img/welcome1.svg" width="459" height="353" alt="Приветственый текст сайта">
+        <img class="intro-text" src="img/welcome1.svg" width="459" height="353" alt="Приветственый текст сайта">
         <div class="polygon"></div>
 
       </div>
@@ -44,28 +48,28 @@
     <section class="features">
       <ul class="features-list">
         <li class="feature-top">
-          <div>
             <h2>Настоящий городок</h2>
             <span> - Ν 1 - </span>
             <p>Седона - не аттракцион для туристов, там
               течёт своя жизнь</p>
-          </div>
-          <div>
-            <img src="img/town.jpg" width="800" height="256" alt="Фотография города">
-          </div>
         </li>
+
+        <li class="town-photo"><img src="img/town.jpg" width="800" height="256" alt="Фотография города"></li>
+
         <li class="feature-item">
           <img src="img/house-icon.svg" alt="">
           <h3>Жилье</h3>
           <p>Рекомендуем пожить в настоящем<br>
             мотеле, всё как в кино!</p>
         </li>
+
         <li class="feature-item">
           <img src="img/food-icon.svg" alt="">
           <h3>Еда</h3>
           <p>Всегда заказывайте фирменный бургер,<br>
             вы не разочаруетесь!</p>
         </li>
+
         <li class="feature-item">
           <img src="img/souvenirs-icon.svg" alt="">
           <h3>Сувениры</h3>
@@ -73,19 +77,17 @@
             но и местного
             производства!</p>
         </li>
+
         <li class="feature-top">
-          <div>
+          
             <h2>Там есть <br>
               Мост дьявола</h2>
-              <span>- Ν 3 -</span>
+            <span>- Ν 3 -</span>
             <p>Да, по нему можно пройти! Если конечно<br>
               вы осмелитесь</p>
-          </div>
-          <div>
-            <img src="img/devil-briidge.jpg" width="800" height="256" alt="Мост дьявола">
-            <!--Аналогичный вопрос-->
-          </div>
+         
         </li>
+        <li class="bridge-photo"><img src="img/devil-bridge.jpg" width="800" height="256" alt="Мост дьявола"></li>
         <li class="feature-item">
           <h2>небольшая площадь</h2>
           <span>- Ν 3 -</span>
@@ -117,13 +119,14 @@
 
   </main>
   <footer class="main-footer">
-    <div>
-      <div class="contacts">
-        <a href="#">#VisitSedona</a>  <!--Разве это ссылка?-->
+    <div class="container">
+      <section class="footer-contacts">
+        <a href="#">#VisitSedona</a><br>
         <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
-      </div>
-      <div>
-        <a class="contact-button" href="#" target="_blank" title="Наша страница в Twitter">
+      </section>
+
+      <section class="footer-social">
+        <a class="social-button" href="#" target="_blank" title="Наша страница в Twitter">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15"
             viewBox="0 0 17 15">
             <path
@@ -131,12 +134,12 @@
             </path>
           </svg>
         </a>
-        <a class="contact-button" href="#" target="_blank" title="Наша страница в Facebook">
+        <a class="social-button" href="#" target="_blank" title="Наша страница в Facebook">
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
             <path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4h4z"></path>
           </svg>
         </a>
-        <a class="contact-button" href="#" target="_blank" title="Наша страница на YouTube">
+        <a class="social-button" href="#" target="_blank" title="Наша страница на YouTube">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16"
             viewBox="0 0 20 16">
             <path
@@ -144,8 +147,9 @@
             </path>
           </svg>
         </a>
-      </div>
-      <div>
+      </section>
+
+      <section class="academy-logo">
         <p>Website by</p>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
           <svg class="academy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108.08 36.85">
@@ -155,7 +159,8 @@
               transform="translate(0 -0.02)"></path>
           </svg>
         </a>
-      </div>
+      </section>
+
     </div>
   </footer>
 </body>
