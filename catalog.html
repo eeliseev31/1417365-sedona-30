@@ -30,19 +30,21 @@
     <main>
         <section class="catalog-filter">
             <form>
-                <fieldset>
+              <div class="filter-container">
+                <fieldset class="infrastructure-filter">
                     <legend>Инфраструктура:</legend>
                     <label class="checkbox"><input type="checkbox" name="infrastructure" checked value="pool">Бассейн</label>
                     <label class="checkbox"><input type="checkbox" name="infrastructure" value="parking">Парковка</label>
                     <label class="checkbox"><input type="checkbox" name="infrastructure" value="wi-fi">Wi-fi</label>
                 </fieldset>
-                <fieldset>
+                <fieldset class="housing-filter">
                     <legend>Тип жилья:</legend>
                     <label class="checkbox"><input type="checkbox" name="housing-type" checked value="hotel">Гостиница</label>
                     <label class="checkbox"><input type="checkbox" name="housing-type" checked value="motel">Отель</label>
                     <label class="checkbox"><input type="checkbox" name="housing-type" checked value="apartments">Апартаменты</label>
                 </fieldset>
-                <!--Место для ползунка стоимости. Кстати, он тоже будет входить в атрибут <form>?-->
+              </div>
+                <!--Место для ползунка стоимости. -->
                 <button class="show-button" type="submit">Показать</button>
             </form>
         </section>
@@ -50,6 +52,7 @@
         <section class="search-results">
             <p>Найдено: 3</p>
             <ul class="sorting-list">
+                <div class="sorting">
                 <li>Сортировка</li>
                 <li><a class="sorting-item" href="#">По цене</a></li>
                 <li><a class="sorting-item" href="#">По типу</a></li>
@@ -60,10 +63,11 @@
                 <li><a href="#"></a>
                     <!--Меньше-->
                 </li>
-
+              </div>
             </ul>
 
             <ul class="result-list">
+              <div class="result-container">
                 <li class="result-item">
                     <img src="/img/catalog/amara-resort.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
                     <a href="#"><h3>Amara Resort & Spa</h3></a>
@@ -91,14 +95,17 @@
                     <a class="book-button" href="#">Забронировать</a>
                     <p>Рейтинг: 9,2</p>
                 </li>
-            </ul>
+              </div>
+            </ul> 
+
+            
         </section>
     </main>
 
     <footer class="main-footer">
         <div>
           <div class="contacts">
-            <a href="#">#VisitSedona</a>  <!--Разве это ссылка?-->
+            <a href="#">#VisitSedona</a>  
             <a href="tel:+74956660166">Тел: +7(495) 666-01-66</a>
           </div>
           <div>
