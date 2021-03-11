@@ -53,14 +53,6 @@ body {
     height: 100%;
 }
 
-/* Main-header */
-
-
-.main-logo {
-    justify-self: center;
-   
-}
-
  /* Main-navigation */ 
 
 
@@ -70,7 +62,20 @@ body {
     padding: 0 auto;
 }
 
+.main-navigation {
+    position: relative;
+}
+
+.main-logo {
+    position: absolute;
+    left: calc(50% - 68px);
+    z-index: 1;
+}
+
 .site-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
 }
@@ -81,6 +86,18 @@ body {
 }
 
 /* User-navigation */
+
+.site-navigation-item {
+    width: 300px;
+    height: 56px;
+    text-align: center;
+    padding-top: 14px;
+    box-sizing: border-box;
+}
+
+.site-navigation-item--right {
+    margin-right: 231px;
+}
 
 .site-navigation a {
     color: var(--basic-black);
@@ -105,11 +122,25 @@ body {
 /* Почему не центрируется? */
 
 .intro {
+    position: relative;
+    background-image: url(../img/background-photo.jpg);
+    height: 509px;
     display: grid;
 }
 
 .intro-text {
+    padding-top: 50px;
     justify-self: center;
+}
+
+.polygon {
+position: absolute;
+width: 1200px;
+height: 57px;
+top: 452px;
+background-image: url(../img/shape.png);
+background-repeat: no-repeat;
+background-size: cover;
 }
 
 /* Features */
@@ -137,6 +168,8 @@ body {
 }
 
 .features-list {
+    padding: 0;
+    margin: 0;
     list-style: none;
     font-weight: normal;
     font-size: 14px;
