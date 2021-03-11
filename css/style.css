@@ -1,0 +1,385 @@
+/* Variables */
+:root {
+    --basic-white: #FFFFFF;
+    --basic-black: #000000;
+    --basic-brown: #766357;
+    --dark-brown: #604E43;
+    --darkest-brown: #503E33;
+    --basic-blue:  #81B3D2;
+    --dark-blue: #669EC0;
+    --darkest-blue: #5496BD; 
+    --basic-background: #EEEEEE;
+    --light-black: #333333;
+   
+}
+
+/* Global */
+
+body {
+    width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+  }
+
+  a {
+      text-decoration: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  /* Grid */
+
+.page {
+    height: 100%;
+}
+
+/* Main-header */
+
+
+.main-logo {
+    justify-self: center;
+   
+}
+
+ /* Main-navigation */ 
+
+
+.main-navigation-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.site-navigation {
+    margin: 0;
+    padding: 0;
+}
+
+.site-navigation,
+.result-list {
+    list-style: none;
+}
+
+/* User-navigation */
+
+.site-navigation a {
+    color: var(--basic-black);
+}
+
+.site-navigation a:hover {  
+    color: var(--basic-blue);
+}
+
+.site-navigation a:active {
+    opacity: 0.3;
+}
+ 
+/* Conatiner */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/* Почему не центрируется? */
+
+.intro {
+    display: grid;
+}
+
+.intro-text {
+    justify-self: center;
+}
+
+/* Features */
+
+.title {
+    font-size: 21px;
+    line-height: 26px;
+    color: var(--basic-black);
+}
+
+.reasons {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--light-black)
+}
+
+.title,
+.reasons {
+    text-align: center;
+}
+
+.features{
+    margin-bottom: 58px;
+}
+
+.features-list {
+    list-style: none;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #333333;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 
+    1fr
+    1fr
+    1fr
+    1fr;
+}
+
+
+
+.town-photo {
+    grid-column: 2 / 4;
+}
+
+.bridge-photo {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.features-list h3 {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-black);
+}
+
+.feature-item h2 {
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-black);
+}
+
+.features-list li:nth-child(8), 
+.features-list li:nth-child(9),
+.features-list li:nth-child(10) {
+    background-color: var(--basic-background)
+}
+
+.feature-top {   
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+    background: var(--basic-blue);
+}
+
+.feature-top h2{
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 21px;
+    color: var(--basic-white);
+}
+
+/* appointment */
+.appointment {
+    text-align: center;
+}
+
+.appointment h3{
+    font-size: 30px;
+    line-height: 24px;
+}
+
+.appointment p{
+    font-weight: 400;
+    font-size: 14px;
+    Line-height: 24px;
+}
+
+/* inner-page */
+
+.catalog-filter {
+    width: 1200px;
+    height: 217px;
+    background-image: url("../img/bg-image.jpg");
+    background-repeat: no-repeat;
+}
+
+.show-button {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+}
+
+
+.search-results p {
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.sorting-list {
+    list-style: none;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px; 
+}
+
+.sorting-item { 
+    text-decoration: var(--basic-blue) dotted;
+    color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px dotted var(--basic-blue);
+     
+}
+
+.sorting-item:hover { 
+    color: var(--basic-blue);
+    text-decoration: none;
+}
+
+.sorting-item:focus {
+    color: var(--basic-blue);
+    
+}
+
+.sorting-item:active { 
+    color: var(--basic-black);
+    text-decoration: none;
+} 
+
+
+
+.result-item h3 {
+font-weight: bold;
+font-size: 21px;
+line-height: 26px;
+}
+
+.result-item p {
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--light-black)
+}
+
+.result-item a {
+    text-decoration: none;
+    color: var(--basic-black);
+}
+
+.result-item a:hover {
+    color: var(--basic-blue);
+}
+
+.result-item a:active{
+    color: var(--basic-black)
+    /* opacity: 1; Спросить почему опять не работает... */
+}
+
+.details-button {
+    line-height: 21;
+    color: var(--basic-white);
+    background-color: var(--basic-blue);
+    
+}
+
+.details-button:hover {
+    background-color: var(--dark-blue);
+}
+
+.details-button:active { /* Спросить как правильно добавить прозрачность ТОЛЬКО тексту */
+    background-color: var(--darkest-blue); 
+    opacity: 0.3;
+}
+
+.book-button {
+    line-height: 21;
+    color: var(--basic-white);
+    background-color: var(--basic-brown);
+}
+
+.book-button:hover {
+    background-color: var(--dark-brown);
+}
+
+.book-button:active { /* Спросить как правильно добавить прозрачность ТОЛЬКО тексту */
+    background-color: var(--darkest-brown);    
+}
+/* main-footer */
+
+/* Узнать, почему не центрируется по человечески */
+
+.main-footer {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.main-footer .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer-contacts {
+    margin: 0;
+    width: 400px;
+    grid-column: 1 / 2;
+    justify-self: center;
+}
+
+.footer-contacts a{
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    color: var(--basic-black);   
+}
+
+.footer-contacts a{ /* Можно ли как-то избежать этой строчки? */
+    text-decoration: none;
+}
+
+.footer-contacts a:hover {
+    color: var(--basic-blue);
+}
+
+.footer-contacts a:active {
+    opacity: 0.3;
+}
+
+.footer-social {
+    width: 400px;
+    justify-self: center;
+}
+
+.social-button {
+    background: var(--basic-blue);
+}
+
+.social-button:hover {
+    background: var(--dark-blue);
+}
+
+.social-button:active{
+    background: var(--darkest-blue);
+}
+
+.academy-logo {
+    width: 400px;
+
+}
