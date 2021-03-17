@@ -47,6 +47,11 @@ body {
     height: auto;
   }
 
+  ul {
+      padding: 0;
+      margin: 0;
+  }
+
 
   /* Grid */
 
@@ -309,6 +314,223 @@ fieldset {
 
 .checkbox {
     margin-top: 25px;
+}
+
+/* FILTER RANGE */
+
+.filter-range {
+    width: 319px;
+    margin-left: 229px;
+}
+
+.filter-range-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 10px;
+    padding-top: 28px;
+    padding-left: 2px;
+}
+
+.price-controls {
+    height: 32px;
+    border: 2px solid #fff;
+    font-size: 0;
+    margin-bottom: 18px;
+    border-radius: 2px;
+    position: relative;
+}
+
+.price-controls .min-price {
+    width: 90px;
+    padding-left: 65px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+    color: var(--basic-white);
+    font-size: 14px;
+    background: 0 0;
+    border: 0;
+    line-height: 1;
+}
+
+.price-controls .max-price {
+    width: 90px;
+    padding-left: 58px;
+}
+
+.price-controls input {
+    width: 50px;
+    margin: 0;
+    color: var(--basic-white);
+    font-size: 14px;
+    background: 0 0;
+    border: 0;
+    line-height: 1;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 22px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.range-controls {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.range-controls .scale {
+    height: 2px;
+    background-color: rgba(255,255,255,.3);
+}
+
+.range-toggle {
+    width: 4px;
+    height: 4px;
+    background: #ababab;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-box-shadow: 0 2px 1px 0 rgb(0 1 1 / 20%);
+    box-shadow: 0 2px 1px 0 rgb(0 1 1 / 20%);
+    position: absolute;
+    top: -9px;
+}
+
+.range-toggle-min {
+    left: 0;
+}
+
+.range-toggle-max {
+    left: 80%;
+}
+
+.btn-transparent {
+    display: block;
+    margin: 0 auto 0 87px;
+    padding: 6px 34px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    background: 0 0;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*  SEARCH RESULTS */
+
+.sorting-block {
+    width: 1056px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 87px;
+    background-image: none;
+    display: flex;
+}
+
+.found {
+    vertical-align: middle;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    padding: 30px 0;
+}
+
+.sorting {
+    padding: 30px 0;
+}
+
+.sorting .sorting-link:focus, .sorting .sorting-link:hover {
+    color: #81b3d2;
+}
+
+.sorting .sorting-link:active {
+    color: #000;
+    border: 0;
+}
+
+.sorting .sorting-title {
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 48px;
+    display: inline;
+}
+
+.sorting .sorting-link:nth-child(2) {
+    margin-left: 34px;
+}
+
+.sorting .sorting-link-active {
+    color: #81b3d2;
+    border: 0;
+}
+
+.sorting .sorting-link {
+    font-size: 12px;
+    line-height: 18px;
+    color: #cacaca;
+    cursor: pointer;
+    border-bottom: 1px solid #81b3d2;
+    border-bottom-style: dotted;
+    margin-left: 31px;
+}
+
+.sorting-direction {
+    margin-left: auto;
+    padding: 30px 0;
+    cursor: pointer;
+}
+
+.arrow-down, .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.arrow-up {
+    border-bottom: 10px solid #cacaca;
+}
+
+.arrow-up:focus, .arrow-up:hover {
+    border-bottom: 10px solid #000;
+}
+
+.arrow-up:active {
+    border-bottom: 10px solid #81b3d2;
+}
+
+.arrow-down {
+    border-top: 10px solid #cacaca;
+    margin-left: 10px;
+}
+
+.arrow-down:focus, .arrow-down:hover {
+    border-top: 10px solid #000;
+}
+
+.arrow-down:active {
+    border-top: 10px solid #81b3d2;
+}
+
+.active-arrow {
+    border-top-color: #81b3d2;
 }
 
 .catalog-filter {

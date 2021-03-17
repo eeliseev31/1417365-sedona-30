@@ -53,14 +53,49 @@
             </div>
           </fieldset>
           <!--Место для ползунка стоимости. -->
-          <button class="show-button" type="submit">Показать</button>
+
+          <div class="filter-range">
+            <div class="filter-range-title">Стоимость в сутки (р):</div>
+            <div class="price-controls">
+                <label class="min-price">
+                    от <input type="text" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                    до <input type="text" name="max-price" value="3000">
+                </label>
+            </div>
+            <div class="range-controls">
+                <div class="scale">
+                    <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+            </div>
+            <button class="btn-transparent" type="submit">Показать</button>
+        </div>
+          
         </div>
 
       </form>
     </section>
 
     <section class="search-results">
-      <ul class="sorting-list">
+
+      <div class="sorting-block">
+        <div class="found">Найдено: 3</div>
+        <div class="sorting">
+            <h2 class="sorting-title">Сортировка:</h2>
+            <a class="sorting-link sorting-link-active" href="#">По цене</a>
+            <a class="sorting-link" href="#">По типу</a>
+            <a class="sorting-link" href="#">По рейтингу</a>
+        </div> 
+        <div class="sorting-direction">
+            <a class="arrow-up" href="#"></a>
+            <a class="arrow-down active-arrow" href="#"></a>
+        </div>
+    </div>
+
+      <!-- <ul class="sorting-list">
         <div class="sorting">
           <li>Найдено: 3</li>
           <li>Сортировка</li>
@@ -68,19 +103,19 @@
           <li><a class="sorting-item" href="#">По типу</a></li>
           <li><a class="sorting-item" href="#">По рейтингу</a></li>
           <li><a class="sorting-item" href="#"></a>
-            <!--Больше-->
+            
           </li>
           <li><a href="#"></a>
-            <!--Меньше-->
+            
           </li>
         </div>
-      </ul>
+      </ul> -->
 
 
       <ul class="result-list">
         <div class="result-container">
           <li class="result-item">
-            <img src="/img/catalog/amara-resort.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+            <img src="/img/catalog/amara.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
             <div class="result-column">
               <a href="#">
                 <h3>Amara Resort & Spa</h3>
@@ -94,7 +129,7 @@
 
           </li>
           <li class="result-item">
-            <img src="img/catalog/desert-quail-inn.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
+            <img src="img/catalog/desert.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
             <div class="result-column">
               <a href="">
                 <h3>Desert Quail Inn</h3>
@@ -108,7 +143,7 @@
               <span class="rating">Рейтинг: 8,9</span></div>
           </li>
           <li class="result-item">
-            <img src="img/catalog/villas-at-poco-diablo.jpg" width="135" height="90"
+            <img src="img/catalog/diablo.jpg" width="135" height="90"
               alt="Апартаменты Villas at Poco Diablo">
             <div class="result-column">
               <a href="#">
