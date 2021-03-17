@@ -11,6 +11,8 @@
     --darkest-blue: #5496BD; 
     --basic-background: #EEEEEE;
     --light-black: #333333;
+    --rating: #666666;
+
    
 }
 
@@ -45,6 +47,19 @@ body {
   img {
     max-width: 100%;
     height: auto;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 
   ul {
@@ -184,10 +199,10 @@ background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 
-    auto
-    auto
-    auto
-    auto;     
+    256px
+    330px
+    256px
+    256px;     
     gap: 0;
 }
 
@@ -218,11 +233,14 @@ background-size: cover;
 
 
 .feature-item {
-    margin: 0;
     padding: 0;
     text-align: center;
     width: 400px;
     height: 330px;
+}
+
+.feature-item img{
+    margin-top: 60px;
 }
 
 .feature-item h2 {
@@ -231,14 +249,15 @@ background-size: cover;
     color: var(--basic-black);
 }
 
-.features-list li:nth-child(8), 
-.features-list li:nth-child(9),
-.features-list li:nth-child(10) {
-
+.feature-middle {
     width: 400px;
     height: 256px;
     text-align: center;
     background-color: var(--basic-background)
+}
+
+.feature-middle h2 {
+    margin-top: 47px;
 }
 
 .feature-top {   
@@ -311,10 +330,39 @@ fieldset {
     margin-right: 117px;
 }
 
+.filter-column label,
+.filter-column1 label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
 
-.checkbox {
+label {
     margin-top: 25px;
 }
+
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/checkbox-off.svg);
+  }
+
+  .filter-input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -42px;
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/checkbox-on.svg);
+    
+  }
+  
 
 /* FILTER RANGE */
 
@@ -407,6 +455,10 @@ fieldset {
     top: -9px;
 }
 
+.range-toggle:hover {
+    transform: scale(1.2, 1.2);
+}
+
 .range-toggle-min {
     left: 0;
 }
@@ -420,7 +472,7 @@ fieldset {
     margin: 0 auto 0 87px;
     padding: 6px 34px;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 21px;
     color: #fff;
     text-transform: uppercase;
     background: 0 0;
@@ -429,6 +481,12 @@ fieldset {
     cursor: pointer;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.btn-transparent:hover {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+ 
 }
 
 /*  SEARCH RESULTS */
@@ -538,6 +596,15 @@ fieldset {
     height: 217px;
     background-image: url("../img/bg-image.jpg");
     background-repeat: no-repeat;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--basic-white);
+}
+
+.catalog-filter legend {
+    font-weight: bold;
+    font-size: 16px;
+
 }
 
 .show-button {
@@ -620,19 +687,29 @@ fieldset {
     grid-row: 1 / 4;
     margin-top: 30px;
     margin-left: 73px;
+    margin-right: 0;
 }
 
 .result-column {
     grid-column: 2 / 4;
     grid-row: 1 / 6;
-    justify-self: startf;
-    margin-left: 0;
+    justify-self: start;
+    
 }
 
 .result-item h3 {
-font-weight: bold;
-font-size: 21px;
-line-height: 26px;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+    color: var(--basic-black);
+}
+
+.result-item h3:hover {
+    color: var(--basic-blue);
+}
+
+.result-item h3:active {
+    color: rgba(0,0,0,0.3);
 }
 
 .result-item span {
@@ -649,39 +726,31 @@ line-height: 26px;
 }
 
 
-.result-item a {
-    text-decoration: none;
-    color: var(--basic-black);
-}
-
-.result-item a:hover {
-    color: var(--basic-blue);
-}
-
-.result-item a:active{
-    color: var(--basic-black)
-    /* opacity: 1; Спросить почему опять не работает... */
-}
-
 .details-button {
+    display: inline-block;
+    text-align: center;
     font-size: 14px;
     line-height: 21px;
     color: var(--basic-white);
     background-color: var(--basic-blue);
     width: 110px;
     height: 27px;  
+    grid-column: 2 / 3;
 }
 
 .details-button:hover {
     background-color: var(--dark-blue);
 }
 
-.details-button:active { /* Спросить как правильно добавить прозрачность ТОЛЬКО тексту */
+.details-button:active { 
+    color: rgba(255,255,255,0.3);
     background-color: var(--darkest-blue); 
-    opacity: 0.3;
+ 
 }
 
 .book-button {
+    display: inline-block;
+    text-align: center;
     line-height: 21px;
     color: var(--basic-white);
     background-color: var(--basic-brown);
@@ -693,8 +762,18 @@ line-height: 26px;
     background-color: var(--dark-brown);
 }
 
-.book-button:active { /* Спросить как правильно добавить прозрачность ТОЛЬКО тексту */
+.book-button:active { 
     background-color: var(--darkest-brown);    
+    color: rgba(255,255,255, 0.3);
+}
+
+.rating {
+    display: block;
+    text-align: center;
+    width: 110px;
+    height: 27px;
+    background-color: var(--form-back);
+    color: var(--rating);
 }
 /* main-footer */
 
@@ -852,10 +931,21 @@ line-height: 26px;
     height: 38px;
     background-color: var(--form-back);
     font-weight: bold;
-    
+    position: relative;
 }
 
-
+.modal-form-arrival::before,
+.modal-form-departure::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    width: 16px;
+    height: 18px;
+    background-image: url("../img/calendar.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+  
 
 .modal-label-adults {
     margin-top: 42px;
