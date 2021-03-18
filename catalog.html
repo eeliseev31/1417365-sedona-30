@@ -15,6 +15,7 @@
 </head>
 
 <body class="page-body">
+  <div class="wrapper">
   <header class="main-header">
     <div class="main-header-bar">
       <div class="main-navigation-wrapper">
@@ -34,10 +35,11 @@
 
   <main class="container">
     <section class="catalog-filter">
-      <form>
+      <h2 class="visually-hidden">Фильтр</h2>
+      <form class="filter-form">
         <div class="filter-container">
           <fieldset class="infrastructure-filter">
-            <div class="filter-column">
+            
               <legend>Инфраструктура:</legend>
 
               <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="infrastructure" id="filter-pool" checked value="pool">
@@ -49,10 +51,10 @@
               <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="infrastructure" id="filter-wi-fi" value="wi-fi">
               <label for="filter-wi-fi">Wi-fi</label>
 
-            </div>
+            
           </fieldset>
           <fieldset class="housing-filter">
-            <div class="filter-column1">
+           
 
               <legend>Тип жилья:</legend>
 
@@ -64,7 +66,7 @@
 
               <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="housing-type" id="filter-motel" checked value="apartments">
               <label for="filter-motel">Апартаменты</label>
-            </div>
+            
           </fieldset>
           <!--Место для ползунка стоимости. -->
 
@@ -109,25 +111,10 @@
         </div>
     </div>
 
-      <!-- <ul class="sorting-list">
-        <div class="sorting">
-          <li>Найдено: 3</li>
-          <li>Сортировка</li>
-          <li><a class="sorting-item" href="#">По цене</a></li>
-          <li><a class="sorting-item" href="#">По типу</a></li>
-          <li><a class="sorting-item" href="#">По рейтингу</a></li>
-          <li><a class="sorting-item" href="#"></a>
-            
-          </li>
-          <li><a href="#"></a>
-            
-          </li>
-        </div>
-      </ul> -->
 
 
       <ul class="result-list">
-        <div class="result-container">
+        
           <li class="result-item">
             <img src="/img/catalog/amara.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
             <div class="result-column">
@@ -172,13 +159,13 @@
               <span class="rating">Рейтинг: 9,2</span>
             </div>
           </li>
-        </div>
+        
       </ul>
 
 
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="catalog-footer">
 
     <div class="footer-contacts">
       <a href="#">#VisitSedona</a><br>
@@ -230,7 +217,7 @@
       </a>
     </div>
   </footer>
-
+  </div>
 </body>
 
 </html>
