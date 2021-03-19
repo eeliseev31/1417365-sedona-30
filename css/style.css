@@ -41,6 +41,8 @@ body {
 
 .wrapper {
     background-color: var(--basic-white);
+
+
 }
 
   a {
@@ -124,9 +126,11 @@ body {
     box-sizing: border-box;
 }
 
+
 .site-navigation-item--right {
     margin-right: 231px;
 }
+
 
 .site-navigation a {
     color: var(--basic-black);
@@ -139,6 +143,9 @@ body {
 .site-navigation a:active {
     opacity: 0.3;
 }
+
+
+
  
 /* Conatiner */
 
@@ -178,6 +185,7 @@ background-size: cover;
     font-size: 21px;
     line-height: 26px;
     color: var(--basic-black);
+    margin-top: 98.5px;
 }
 
 .reasons {
@@ -311,15 +319,18 @@ background-size: cover;
 
 /* inner-page */
 
-.filter-form {
-    padding: 0 73px;
-}
-
 fieldset {
     border: 0;
     margin: 0;
-    padding-top: 26.5px;
+    
 }
+
+.filter-form {
+    padding-left: 58px;
+    padding-right: 73px;
+}
+
+
 
 .filter-container {
     display: flex;
@@ -335,8 +346,8 @@ fieldset {
 
 
 .infrastructure-filter {
-    margin-left: 73px;
-    margin-right: 117px;
+  
+    margin-right: 82px;
 }
 
 .infrastructure-filter label,
@@ -345,16 +356,21 @@ fieldset {
   display: block;
   cursor: pointer;
   user-select: none;
+  padding-left: 35px;
+}
+
+.filter-legend {
+    padding-top: 26.5px;
 }
 
 label {
-    margin-top: 25px;
+    margin-top: 23px;
 }
 
 .filter-input-checkbox + label::before {
     content: "";
     position: absolute;
-    left: -42px;
+    left: 0;
     top: 0;
     width: 23px;
     height: 23px;
@@ -365,7 +381,7 @@ label {
     content: "";
     position: absolute;
     top: 0px;
-    left: -42px;
+    left: 0;
     width: 27px;
     height: 23px;
     background-image: url(../img/checkbox-on.svg);
@@ -379,7 +395,7 @@ label {
 
 .filter-range {
     width: 319px;
-    margin-left: 229px;
+    margin-left: auto;
 }
 
 .filter-range-title {
@@ -389,6 +405,7 @@ label {
     margin-bottom: 10px;
     padding-top: 26.5px;
     padding-left: 2px;
+    
 }
 
 .price-controls {
@@ -408,7 +425,8 @@ label {
 
 .price-controls input {
     width: 50px;
-    margin: 0;
+    margin: 6px;
+    padding-left: 18px;
     color: var(--basic-white);
     font-size: 14px;
     background: 0 0;
@@ -422,15 +440,7 @@ label {
     padding-left: 58px;
 }
 
-.price-controls input {
-    width: 50px;
-    margin: 0;
-    color: var(--basic-white);
-    font-size: 14px;
-    background: 0 0;
-    border: 0;
-    line-height: 1;
-}
+
 
 .price-controls::after {
     content: "";
@@ -482,7 +492,9 @@ label {
 
 .btn-transparent {
     display: block;
-    margin: 0 auto 0 87px;
+    width: 137px;
+    height: 36px;
+    margin: 35px auto 0 87px;
     padding: 6px 34px;
     font-size: 14px;
     line-height: 21px;
@@ -492,7 +504,6 @@ label {
     border: 2px solid #fff;
     border-radius: 2px;
     cursor: pointer;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -730,6 +741,11 @@ label {
     
 } 
 
+.price {
+    position: absolute;
+    left: 350px;
+}
+
 .result-item h3 {
     font-weight: bold;
     font-size: 21px;
@@ -820,6 +836,8 @@ label {
     height: 27px;
     background-color: var(--form-back);
     color: var(--rating);
+    padding-top: 4px;
+    box-sizing: border-box;
 }
 
 iframe {
@@ -924,6 +942,8 @@ iframe {
 
 .paragraph-margin {
     margin-right: 8px;
+    margin-left: 55px;
+    
 }
 
 /* Modal */
