@@ -13,8 +13,13 @@
     --light-black: #333333;
     --rating: #666666;
     --background-gray: #f2f2f2;
-
+    --range-white: #ababab;
+    --arrow-white: #cacaca;
     --search-shadow: rgba(0, 1, 1, 0.15);
+    --academy-white: #BDBBBC;
+    --result-white: #E5E5E5;
+    --form-background: #EBEBEB;
+    --small-button-gray: #A9A9A9; 
 }
 
 /* Fonts */
@@ -149,6 +154,8 @@ body {
 }
 
 
+
+
 .site-navigation-item--right {
     margin-right: 231px;
 }
@@ -166,6 +173,9 @@ body {
     opacity: 0.3;
 }
 
+.current-page a{
+    color: var(--basic-brown);
+}
 
 
  
@@ -182,6 +192,7 @@ body {
 .intro {
     position: relative;
     background-image: url(../img/background-photo.jpg);
+    background-color: var(--darkest-blue);
     height: 509px;
     display: grid;
 }
@@ -431,7 +442,7 @@ fieldset {
 
 .price-controls {
     height: 32px;
-    border: 2px solid #fff;
+    border: 2px solid var(--basic-white);
     font-size: 0;
     margin-bottom: 18px;
     border-radius: 2px;
@@ -468,7 +479,7 @@ fieldset {
     position: absolute;
     width: 2px;
     height: 22px;
-    background: #fff;
+    background: var(--basic-white);
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%,-50%);
@@ -489,8 +500,8 @@ fieldset {
 .range-toggle {
     width: 4px;
     height: 4px;
-    background: #ababab;
-    border: 8px solid #fff;
+    background: var(--range-white);
+    border: 8px solid var(--basic-white);
     border-radius: 50%;
     cursor: pointer;
     -webkit-box-shadow: 0 2px 1px 0 rgb(0 1 1 / 20%);
@@ -519,10 +530,10 @@ fieldset {
     padding: 6px 34px;
     font-size: 14px;
     line-height: 21px;
-    color: #fff;
+    color: var(--basic-white);
     text-transform: uppercase;
     background: 0 0;
-    border: 2px solid #fff;
+    border: 2px solid var(--basic-white);
     border-radius: 2px;
     cursor: pointer;
     box-sizing: border-box;
@@ -559,11 +570,11 @@ fieldset {
 }
 
 .sorting .sorting-link:focus, .sorting .sorting-link:hover {
-    color: #81b3d2;
+    color: var(--basic-blue);
 }
 
 .sorting .sorting-link:active {
-    color: #000;
+    color: var(--basic-black);
     border: 0;
 }
 
@@ -585,7 +596,7 @@ fieldset {
 }
 
 .sorting .sorting-link-active {
-    color: #81b3d2;
+    color: var(--basic-blue);
     border: 0;
 }
 
@@ -593,9 +604,9 @@ fieldset {
     font-size: 12px;
     line-height: 18px;
     font-weight: normal;
-    color: #cacaca;
+    color: var(--arrow-white);
     cursor: pointer;
-    border-bottom: 1px solid #81b3d2;
+    border-bottom: 1px solid var(--basic-blue);
     border-bottom-style: dotted;
     margin-left: 31px;
 }
@@ -616,32 +627,32 @@ fieldset {
 }
 
 .arrow-up {
-    border-bottom: 10px solid #cacaca;
+    border-bottom: 10px solid var(--arrow-white);
 }
 
 .arrow-up:focus, .arrow-up:hover {
-    border-bottom: 10px solid #000;
+    border-bottom: 10px solid var(--basic-black);
 }
 
 .arrow-up:active {
-    border-bottom: 10px solid #81b3d2;
+    border-bottom: 10px solid var(--basic-blue);
 }
 
 .arrow-down {
-    border-top: 10px solid #cacaca;
+    border-top: 10px solid var(--arrow-white);
     margin-left: 10px;
 }
 
 .arrow-down:focus, .arrow-down:hover {
-    border-top: 10px solid #000;
+    border-top: 10px solid var(--basic-black);
 }
 
 .arrow-down:active {
-    border-top: 10px solid #81b3d2;
+    border-top: 10px solid var(--basic-blue);
 }
 
 .active-arrow {
-    border-top-color: #81b3d2;
+    border-top-color: var(--basic-blue);
 }
 
 .catalog-filter {
@@ -649,6 +660,7 @@ fieldset {
     height: 217px;
     background-image: url("../img/bg-image.jpg");
     background-repeat: no-repeat;
+    background-color: var(--darkest-blue);
     font-size: 14px;
     line-height: 21px;
     color: var(--basic-white);
@@ -708,7 +720,7 @@ fieldset {
     justify-content: start;
     width: 1200px;
     height: 150px;
-    border: 1px solid #E5E5E5;
+    border: 1px solid var(--result-white);
     border-collapse: collapse;    
     position: relative;
 }
@@ -790,6 +802,7 @@ fieldset {
     line-height: 21px;
     color: var(--light-black);
     margin-top: 7px;
+    
 }
 
 .result-column1 {
@@ -815,6 +828,7 @@ fieldset {
     padding-top: 4px;
     box-sizing: border-box;
     margin-top: 13.5px;
+
 }
 
 .details-button:hover {
@@ -958,7 +972,7 @@ iframe {
 }
 
 .academy:active {
-    fill: #BDBBBC;
+    fill: var(--academy-white);
 }
 
 .paragraph-margin {
@@ -976,8 +990,8 @@ iframe {
 .search-wrapper {
     position: absolute;
     top: 147px;
-    left: 0px;
-    width: 100%;
+    left: 316px;
+    width: 568px;
   }
   
   .search {
@@ -1003,6 +1017,15 @@ iframe {
     font-weight: 700;
     box-sizing: border-box;
     border: 0;
+  }
+
+  .hotel-search:hover {
+      background-color: var(--dark-brown);
+  }
+
+  .hotel-search:active {
+      background-color: var(--darkest-brown);
+      color: rgba(255, 255, 255, 0.3);
   }
   
   .form {
@@ -1034,7 +1057,7 @@ iframe {
     margin: 0px;
     background-color: var(--background-gray);
     border: none;
-    color: var(--special-gray-2);
+    color: var(--small-button-gray);
     font-weight: bold;
     font-size: 23px;
     font-family: "PT Sans", "Arial", sans-serif;
@@ -1092,6 +1115,7 @@ iframe {
     width: 332px;
     background-color: var(--background-gray);
     border: none;
+    outline: none;
     height: 35px;
     text-transform: uppercase;
     font-weight: 700;
@@ -1104,6 +1128,15 @@ iframe {
     padding-top: 0;
     padding-left: 13px;
   }
+
+  .text:hover {
+      background-color: var(--form-background);
+  }
+
+.text:focus {
+    background-color: var(--basic-white);
+    outline: 2px solid var(--result-white);
+}
   
   
   .fields-after {
@@ -1169,7 +1202,7 @@ iframe {
 
 .modal-button:active {
     background-color: var(--darkest-brown);
-    color: rgba(255,255,255, 0.3)  ;
+    color: 604E43  ;
 
 }
 
