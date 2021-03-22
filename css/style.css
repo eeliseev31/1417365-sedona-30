@@ -989,20 +989,23 @@ iframe {
 
 .search-wrapper {
     position: absolute;
-    top: 147px;
+    top: 231px;
     left: 316px;
     width: 568px;
   }
   
   .search {
     width: 568px;
-    height: 480px;
+    height: 395px;
     background-color: var(--basic-white);
     margin: 0px auto;
     box-shadow: 0px 7px 15px var(--search-shadow);
   }
 
   .hotel-search {
+    position: absolute;
+    top: 145px;
+    left: 316px;
     width: 568px;
     height: 86px;
     color: var(--basic-white);
@@ -1013,11 +1016,15 @@ iframe {
     text-align: center;
     background-color: var(--basic-brown);
     margin: 0;
+    border: 0;
     padding-left: 9px;
     font-weight: 700;
     box-sizing: border-box;
-    border: 0;
+    
   }
+
+
+
 
   .hotel-search:hover {
       background-color: var(--dark-brown);
@@ -1028,6 +1035,8 @@ iframe {
       color: rgba(255, 255, 255, 0.3);
   }
   
+
+
   .form {
     display: flex;
     flex-wrap: wrap;
@@ -1035,6 +1044,11 @@ iframe {
     padding-top: 55px;
   }
   
+  .hide-form {
+   display: none;
+   animation: bounce 0.6s;
+  } 
+
   .form-line {
     position: relative;
     width: 478px;
@@ -1232,3 +1246,21 @@ iframe {
     color: rgba(255,255,255,0.3);
     background-color: var(--darkest-blue);
 }
+
+@keyframes bounce {
+    0% {
+      transform: translateY(-2000px);
+    }
+  
+    70% {
+      transform: translateY(30px);
+    }
+  
+    90% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
