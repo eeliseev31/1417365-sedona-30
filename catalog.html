@@ -22,24 +22,32 @@
         <div class="main-header-bar">
           <div class="main-navigation-wrapper">
             <nav class="main-navigation">
-              <a href="index.html"
-                ><img
-                  class="main-logo"
+              <a class="main-header-logo" href="index.html">
+                <img
+                  class="main-image"
                   src="img/main-logo.svg"
                   width="138"
                   height="70"
-                  alt="Логотип сайта"
-              /></a>
-              <ul class="site-navigation">
-                <li class="site-navigation-item"><a href="#">Информация</a></li>
-                <li class="site-navigation-item site-navigation-item--right">
-                  <a href="#">Фото и видео</a>
+                  alt="Герб города
+                Седона"
+                />
+              </a>
+              <ul class="site-navigation site-navigation-inner">
+                <li class="navigation-item navigation-item-first">
+                  <a class="navigation-left-1" href="#">Информация</a>
                 </li>
-                <li class="site-navigation-item">
-                  <a href="#">Карта штата</a>
+                <li class="navigation-item navigation-item-second">
+                  <a class="navigation-left-2" href="#">Фото и видео</a>
                 </li>
-                <li class="site-navigation-item current-page">
-                  <a href="catalog.html">Гостиницы</a>
+                <li class="navigation-item navigation-item-third">
+                  <a class="navigation-right-2" href="#">Карта штата</a>
+                </li>
+                <li class="navigation-item navigation-item-fourth">
+                  <a
+                    class="navigation-right-1 navigation-here"
+                    href="catalog.html"
+                    >Гостиницы</a
+                  >
                 </li>
               </ul>
             </nav>
@@ -51,107 +59,130 @@
         <section class="catalog-filter">
           <h2 class="visually-hidden">Фильтр</h2>
           <form
-            class="filter-form"
-            action="https://echo.htmlacademy.ru/"
-            method="POST"
+            class="filter"
+            action="https://echo.htmlacademy.ru"
+            method="GET"
           >
-            <div class="filter-container">
-              <fieldset class="infrastructure-filter">
-                <legend class="filter-legend">Инфраструктура:</legend>
-                <input
-                  class="visually-hidden filter-input-checkbox filter-input"
-                  type="checkbox"
-                  name="infrastructure"
-                  id="filter-pool"
-                  checked
-                  value="pool"
-                />
-                <label for="filter-pool">Бассейн</label>
-
-                <input
-                  class="visually-hidden filter-input-checkbox filter-input"
-                  type="checkbox"
-                  name="infrastructure"
-                  id="filter-parking"
-                  value="parking"
-                />
-                <label for="filter-parking">Парковка</label>
-
-                <input
-                  class="visually-hidden filter-input-checkbox filter-input"
-                  type="checkbox"
-                  name="infrastructure"
-                  id="filter-wi-fi"
-                  value="wi-fi"
-                />
-                <label for="filter-wi-fi">Wi-fi</label>
+            <div class="infrastructure">
+              <fieldset class="fieldset">
+                <legend class="f-legend">Инфраструктура:</legend>
+                <ul class="filter-list">
+                  <li class="filter-option filter-checkbox">
+                    <label class="check option" for="filter-swimming-pool">
+                      <input
+                        class="check-input"
+                        type="checkbox"
+                        name="swimming-pool"
+                        id="filter-swimming-pool"
+                        checked=""
+                      />
+                      <span class="check-box"></span>
+                      бассейн
+                    </label>
+                  </li>
+                  <li class="filter-option filter-option-p filter-checkbox">
+                    <label class="check option" for="filter-parking">
+                      <input
+                        class="check-input"
+                        type="checkbox"
+                        name="parking"
+                        id="filter-parking"
+                      />
+                      <span class="check-box"></span>
+                      парковка
+                    </label>
+                  </li>
+                  <li class="filter-option filter-checkbox">
+                    <label class="check option" for="filter-wi-fi">
+                      <input
+                        class="check-input"
+                        type="checkbox"
+                        name="wi-fi"
+                        id="filter-wi-fi"
+                      />
+                      <span class="check-box"></span>
+                      wi-fi
+                    </label>
+                  </li>
+                </ul>
               </fieldset>
-              <fieldset class="housing-filter">
-                <legend class="filter-legend">Тип жилья:</legend>
-
-                <input
-                  class="visually-hidden filter-input-checkbox filter-input"
-                  type="checkbox"
-                  name="housing-type"
-                  id="filter-hostel"
-                  checked
-                  value="hotel"
-                />
-                <label for="filter-hostel">Гостиница</label>
-
-                <input
-                  class="visually-hidden filter-input-checkbox filter-input"
-                  type="checkbox"
-                  name="housing-type"
-                  id="filter-hotel"
-                  checked
-                  value="motel"
-                />
-                <label for="filter-hotel">Мотель</label>
-
-                <input
-                  class="visually-hidden filter-input-checkbox filter-input"
-                  type="checkbox"
-                  name="housing-type"
-                  id="filter-motel"
-                  checked
-                  value="apartments"
-                />
-                <label for="filter-motel">Апартаменты</label>
+            </div>
+            <div class="type-l">
+              <fieldset class="fieldset fielfset-type">
+                <legend class="f-legend">Тип жилья:</legend>
+                <ul class="filter-list filter-list-type">
+                  <li class="filter-option filter-checkbox">
+                    <label class="check option" for="filter-hotel">
+                      <input
+                        class="check-input"
+                        type="checkbox"
+                        name="hotel"
+                        id="filter-hotel"
+                        checked=""
+                      />
+                      <span class="check-box check-box-t"></span>
+                      гостиница
+                    </label>
+                  </li>
+                  <li class="filter-option filter-option-t filter-checkbox">
+                    <label class="check option" for="filter-motel">
+                      <input
+                        class="check-input"
+                        type="checkbox"
+                        name="motel"
+                        id="filter-motel"
+                        checked=""
+                      />
+                      <span class="check-box check-box-t"></span>
+                      мотель
+                    </label>
+                  </li>
+                  <li class="filter-option filter-checkbox">
+                    <label class="check option" for="filter-apartments">
+                      <input
+                        class="check-input"
+                        type="checkbox"
+                        name="apartments"
+                        id="filter-apartments"
+                        checked=""
+                      />
+                      <span class="check-box check-box-t"></span>
+                      апартаменты
+                    </label>
+                  </li>
+                </ul>
               </fieldset>
-              <!--Место для ползунка стоимости. -->
-
-              <div class="filter-range">
-                <div class="filter-range-title">Стоимость в сутки (р):</div>
-                <div class="price-controls">
-                  <label for="min-price" class="min-price">
-                    от
-                    <input
-                      type="text"
-                      name="min-price"
-                      id="min-price"
-                      value="0"
-                    />
-                  </label>
-                  <label for="max-price" class="max-price">
-                    до
-                    <input
-                      type="text"
-                      name="max-price"
-                      id="max-price"
-                      value="3000"
-                    />
-                  </label>
+            </div>
+            <div class="cost-per-day">
+              <fieldset class="fieldset fieldset-range">
+                <legend class="f-legend f-legend-range">
+                  Стоимость в сутки (Р):
+                </legend>
+                <div class="range-container">
+                  <span class="range-limit range-limit-from">от 0</span>
+                  <span class="range-limit range-limit-to">до 3000</span>
                 </div>
+                <img
+                  class="stick-img"
+                  src="img/separate-stick.svg"
+                  width="2"
+                  height="22"
+                  alt="Палка-разделялка"
+                />
+
                 <div class="range-controls">
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="range-toggle range-toggle-min"></div>
-                  <div class="range-toggle range-toggle-max"></div>
+
+                  <div class="range range1"></div>
+                  <div class="range range2"></div>
                 </div>
-                <button class="btn-transparent" type="submit">Показать</button>
-              </div>
+              </fieldset>
+
+              <button class="transparent-button filter-button" type="submit">
+                Показать
+              </button>
             </div>
           </form>
         </section>
