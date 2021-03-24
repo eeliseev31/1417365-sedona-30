@@ -91,11 +91,6 @@ img {
   overflow: hidden;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-}
-
 /* Grid */
 
 .page {
@@ -125,8 +120,6 @@ ul {
   top: 0;
   z-index: 1;
 }
-
-
 
 .site-navigation {
   display: flex;
@@ -168,18 +161,16 @@ ul {
 
 .result-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
 }
 
 /* User-navigation */
-.navigation-here  {
+.navigation-here {
   color: var(--basic-brown);
 }
-
-/* .site-navigation a {
-  color: var(--basic-black);
-} */
 
 .site-navigation a:hover {
   color: var(--basic-blue);
@@ -187,6 +178,10 @@ ul {
 
 .site-navigation a:active {
   opacity: 0.3;
+}
+
+.site-navigation a:focus {
+  color: var(--basic-brown);
 }
 
 /* Conatiner */
@@ -210,14 +205,14 @@ ul {
   justify-self: center;
 }
 
-.polygon {
+.intro::before {
+  content: "";
   position: absolute;
   width: 1200px;
   height: 57px;
   top: 452px;
   background-image: url(../img/shape.png);
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* Features */
@@ -450,6 +445,7 @@ ul {
 }
 
 /* appointment */
+
 .appointment {
   display: flex;
   flex-direction: column;
@@ -496,6 +492,8 @@ ul {
 .filter .filter-list {
   list-style: none;
   font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
 
 .filter-option {
@@ -702,7 +700,7 @@ ul {
   cursor: pointer;
 }
 
-fieldset {
+.filter-fieldset {
   border: 0;
   margin: 0;
 }
@@ -945,7 +943,7 @@ fieldset {
 }
 
 .arrow-up:focus,
-.arrow-up:hover {
+.arrow-up {
   border-bottom: 10px solid var(--basic-black);
 }
 
@@ -1238,6 +1236,8 @@ iframe {
 
 .footer-social-flex {
   list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   width: 150px;
   justify-content: space-between;
@@ -1328,16 +1328,20 @@ iframe {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.form {
+.modal-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 55px;
 }
 
+.animation-open {
+  animation-name: open-window;
+  animation-duration: 5s;
+}
+
 .hide-form {
   display: none;
-  animation: bounce 0.6s;
 }
 
 .form-line {
@@ -1531,6 +1535,17 @@ iframe {
 .hotel-search-button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: var(--darkest-blue);
+}
+
+/* Animations  */
+
+@keyframes open-window {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
+  }
 }
 
 @keyframes bounce {
