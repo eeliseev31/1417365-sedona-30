@@ -16,6 +16,10 @@
   --range-gray: #ababab;
   --arrow-white: #cacaca;
   --search-shadow: rgba(0, 1, 1, 0.15);
+  --white-opacity: rgba(255, 255, 255, 0.3);
+  --black-opacity: rgba(0, 0, 0, 0.3);
+  --footer-opacity: rgba(255, 255, 255, 0.9);
+  --body-shadow: rgba(0, 1, 1, 0.2);
   --academy-white: #bdbbbc;
   --result-white: #e5e5e5;
   --form-background: #ebebeb;
@@ -58,7 +62,7 @@ body {
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--body-shadow);
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
@@ -325,7 +329,7 @@ img {
   padding-top: 0px;
   text-align: center;
   width: 400px;
-  height: 330px;
+  min-height: 330px;
 }
 
 .feature-item:nth-child(1)::before {
@@ -369,7 +373,7 @@ img {
   flex-direction: column;
   align-items: center;
   width: 400px;
-  height: 256px;
+  min-height: 256px;
   text-align: center;
   background-color: var(--basic-background);
 }
@@ -472,11 +476,13 @@ img {
   background-image: url(../img/background-blur.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
-  grid-template-rows: 219px;
+  grid-template-rows: min-content;
   border: 0;
   margin-top: -2px;
+  min-height: 217px;
 }
 
 .infrastructure {
@@ -572,6 +578,7 @@ img {
 }
 
 .fieldset-range {
+  border: 0;
   padding-left: 10px;
 }
 
@@ -828,7 +835,7 @@ img {
 
 .range-controls .scale {
   height: 2px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--white-opacity);
 }
 
 .range-toggle {
@@ -971,9 +978,10 @@ img {
 
 .catalog-filter {
   width: 1200px;
-  height: 217px;
+  min-height: 217px;
   background-image: url("../img/bg-image.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-color: var(--darkest-blue);
   font-size: 14px;
   line-height: 21px;
@@ -1098,7 +1106,7 @@ img {
 }
 
 .result-item h3:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--black-opacity);
 }
 
 .result-item span {
@@ -1107,6 +1115,7 @@ img {
   line-height: 21px;
   color: var(--light-black);
   margin-top: 7px;
+  vertical-align: baseline;
 }
 
 .result-column1 {
@@ -1120,6 +1129,7 @@ img {
   display: inline-block;
   text-align: center;
   font-weight: bold;
+  vertical-align: baseline;
   font-size: 14px;
   line-height: 21px;
   color: var(--basic-white);
@@ -1137,12 +1147,13 @@ img {
 }
 
 .details-button:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--white-opacity);
   background-color: var(--darkest-blue);
 }
 
 .book-button {
   display: inline-block;
+  vertical-align: baseline;
   text-align: center;
   font-weight: bold;
   line-height: 21px;
@@ -1160,7 +1171,7 @@ img {
 
 .book-button:active {
   background-color: var(--darkest-brown);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--white-opacity);
 }
 
 .rating {
@@ -1174,10 +1185,20 @@ img {
   box-sizing: border-box;
 }
 
-iframe {
-  padding-top: 116px;
+.google-map {
+  z-index: 1;
+
+  margin-top: 116px;
   border: 0;
-  width: 1199px;
+  width: 1200px;
+  height: 594px;
+}
+
+.map {
+  position: absolute;
+  top: 276px;
+  z-index: 0;
+  width: 1200px;
   height: 594px;
 }
 
@@ -1185,8 +1206,9 @@ iframe {
 
 .main-footer {
   position: absolute;
+  z-index: 2;
   bottom: 0px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--footer-opacity);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1195,7 +1217,7 @@ iframe {
 
 .catalog-footer {
   bottom: 0px;
-  background: rgba(255, 255, 255, 0.9);
+  background: var(--footer-opacity);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1289,11 +1311,12 @@ iframe {
   top: 276px;
   left: 316px;
   width: 568px;
+  z-index: 2;
 }
 
 .search {
   width: 568px;
-  height: 395px;
+  min-height: 395px;
   background-color: var(--basic-white);
   margin: 0px auto;
   box-shadow: 0px 7px 15px var(--search-shadow);
@@ -1325,7 +1348,7 @@ iframe {
 
 .hotel-search:active {
   background-color: var(--darkest-brown);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--white-opacity);
 }
 
 .modal-form {
@@ -1533,7 +1556,7 @@ iframe {
 }
 
 .hotel-search-button:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--white-opacity);
   background-color: var(--darkest-blue);
 }
 
