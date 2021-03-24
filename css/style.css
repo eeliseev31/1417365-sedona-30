@@ -13,7 +13,7 @@
   --light-black: #333333;
   --rating: #666666;
   --background-gray: #f2f2f2;
-  --range-white: #ababab;
+  --range-gray: #ababab;
   --arrow-white: #cacaca;
   --search-shadow: rgba(0, 1, 1, 0.15);
   --academy-white: #BDBBBC;
@@ -112,12 +112,12 @@ ul {
 }
 
 .main-navigation {
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: 700;
-    color: var(--basic-black);
-    background-color: transparent;
-    position: relative;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+  background-color: transparent;
+  position: relative;
 }
 
 /* .main-header-logo {
@@ -128,48 +128,48 @@ ul {
 } */
 
 .main-image {
-    position: absolute;
-    left: calc(50% - 69px);
-    top: 0;
-    z-index: 1;
+  position: absolute;
+  left: calc(50% - 69px);
+  top: 0;
+  z-index: 1;
 }
 
 .site-navigation {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    align-items: center;
-    margin: 0;
-    height: 53px;
-    padding: 0 72px;
-    border-bottom: 3px solid var(--basic-white);
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  height: 53px;
+  padding: 0 72px;
+  border-bottom: 3px solid var(--basic-white);
 }
 
 .navigation-item {
-    width: 25%;
+  width: 25%;
 }
 
 .navigation-item-first {
-    text-align: left;
-    margin-right: 2px;
+  text-align: left;
+  margin-right: 2px;
 }
 
 .navigation-item-second {
-    text-align: left;
-    padding-right: 40px;
+  text-align: left;
+  padding-right: 40px;
 }
 
 .navigation-item:nth-child(2) {
-    margin-right: 7%;
+  margin-right: 7%;
 }
 
 .navigation-item-third {
-    text-align: right;
-    padding-left: 32px;
+  text-align: right;
+  padding-left: 32px;
 }
 
 .navigation-item-fourth {
-    text-align: right;
+  text-align: right;
 }
 
 .result-list {
@@ -248,40 +248,40 @@ ul {
 /* FIGURE */
 
 .figure {
-    display: flex;
-    margin: 0;
-  }
-  
-  .figcaption {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    order: -1;
-    width: 400px;
-    background-color: var(--basic-blue);
-    color: var(--basic-white);
-  }
+  display: flex;
+  margin: 0;
+}
 
-  .figcaption-second {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 400px;
-    background-color: var(--basic-blue);
-    color: var(--basic-white);
-  }
-  
-  .figure-title {
-    text-align: center;
-  }
-  
-  .figure-span {
-    text-align: center;
-  }
-  
-  .paragraph {
-    text-align: center;
-  }
+.figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: -1;
+  width: 400px;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.figcaption-second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.figure-title {
+  text-align: center;
+}
+
+.figure-span {
+  text-align: center;
+}
+
+.paragraph {
+  text-align: center;
+}
 
 .title,
 .reasons {
@@ -302,8 +302,6 @@ ul {
   color: var(--light-black);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows:
-    256px -1px 256px 256px;
   gap: 0;
 }
 
@@ -458,209 +456,220 @@ ul {
 /* inner-page */
 
 .filter {
-    background-image: url(../img/background-blur.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 219px;
-    border: 0;
-    margin-top: -2px;
+  background-image: url(../img/background-blur.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 219px;
+  border: 0;
+  margin-top: -2px;
 }
 
 .infrastructure {
-    margin-top: 26.5px;
-    margin-left: 72px;
+  margin-top: 26.5px;
+  margin-left: 72px;
 }
 
 .filter .f-legend {
-    font-size: 16px;
-    font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .filter .filter-list {
-    list-style: none;
-    font-size: 14px;
+  list-style: none;
+  font-size: 14px;
 }
 
 .filter-option {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .check {
-    padding-left: 40px;
+  padding-left: 40px;
 }
 
 .check-input {
-    position: absolute;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .check-input:checked+.check-box {
-    background-image: url(../img/checkbox-on.svg);
-    width: 26px;
+  background-image: url(../img/checkbox-on.svg);
+  width: 26px;
 }
 
 .check-box {
-    position: absolute;
-    margin-left: -40px;
-    width: 23px;
-    height: 23px;
-    background-image: url(../img/checkbox-off.svg);
+  position: absolute;
+  margin-left: -40px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.svg);
 }
 
 .filter-option-p {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .filter-option:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.cost-per-day, .type-l {
-    margin-top: 26.5px;
-    margin-left: 20px;
+.cost-per-day,
+.type-l {
+  margin-top: 26.5px;
+  margin-left: 20px;
 }
 
 .fielfset-type {
-    margin-left: 6px;
+  margin-left: 6px;
 }
 
 .filter .f-legend {
-    font-size: 16px;
-    font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .filter .filter-list {
-    list-style: none;
-    font-size: 14px;
+  list-style: none;
+  font-size: 14px;
 }
 
 .check {
-    padding-left: 40px;
+  padding-left: 40px;
 }
 
 /* THIRD */
 
 .cost-per-day {
-    width: 300px;
-    margin-left: 200px;
+  width: 300px;
+  margin-left: 200px;
 }
 
 .fieldset-range {
-    padding-left: 10px;
-    margin-bottom: 15px;
+  padding-left: 10px;
 }
 
 .filter .f-legend {
-    font-size: 16px;
-    font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
 }
 
-.filter .f-legend, .filter .filter-list {
-    line-height: 21px;
-    color: var(--basic-white);
+.filter .f-legend,
+.filter .filter-list {
+  line-height: 21px;
+  color: var(--basic-white);
 }
+
 .f-legend-range {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .range-container {
-    display: flex;
-    justify-content: space-around;
-    width: 313px;
-    height: 32px;
-    border: 2px solid var(--basic-white);
-    border-radius: 2px;
-    margin-bottom: -2px;
+  display: flex;
+  justify-content: space-around;
+  width: 313px;
+  height: 32px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  margin-bottom: -2px;
 }
 
 .range-limit-from {
-    margin-top: -1px;
-    padding-left: 15px;
-    margin-right: -3px;
+  margin-top: -1px;
+  padding-left: 15px;
+  margin-right: -3px;
 }
+
 .range-limit {
-    font-size: 14px;
-    line-height: 21px;
-    color: var(--basic-white);
-    padding-top: 6.5px;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-white);
+  padding-top: 6.5px;
 }
 
 .range-limit-to {
-    margin-top: -1px;
-    padding-left: 20px;
-    margin-right: -2px;
+  margin-top: -1px;
+  padding-left: 20px;
+  margin-right: -2px;
 }
 
 .stick-img {
-    position: absolute;
-    margin-left: 159px;
-    margin-top: -27px;
+  position: absolute;
+  margin-left: 159px;
+  margin-top: -27px;
 }
 
 .range-controls {
-    position: relative;
-    margin-top: 22px;
-    margin-bottom: 18px;
+  position: relative;
+  margin-top: 22px;
+  margin-bottom: 18px;
 }
 
-.bar, .scale {
-    height: 2px;
-    background-color: var(--special-gray-4);
+.bar,
+.scale {
+  height: 2px;
+  background-color: var(--special-gray-4);
 }
 
 .bar {
-    width: 80%;
-    background-color: var(--basic-white);
+  width: 80%;
+  background-color: var(--basic-white);
 }
 
 .range {
-    position: absolute;
-    top: -9px;
-    height: 4px;
-    width: 4px;
-    border: 8px solid var(--basic-white);
-    border-radius: 50%;
-    box-shadow: 0 2px 1px 0 var(--body-shadow);
-    cursor: pointer;
+  position: absolute;
+  top: -9px;
+  height: 4px;
+  width: 4px;
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 var(--body-shadow);
+  cursor: pointer;
 }
 
-.range, .range:hover {
-    background-color: var(--range-dot);
+.range,
+.range:hover {
+  background-color: var(--range-gray);
+}
+
+.range1 {
+  background-color: var(--range-gray);
 }
 
 .range2 {
-    left: 80%;
+  left: 80%;
 }
 
 .range:hover {
-    border: 10px solid var(--basic-white);
+  border: 10px solid var(--basic-white);
 }
 
-.range, .range:hover {
-    background-color: var(--range-dot);
+.range,
+.range:hover {
+  background-color: var(--range-gray);
 }
 
 .transparent-button {
-    font-size: 14px;
-    line-height: 21px;
-    border: 2px solid var(--basic-white);
-    border-radius: 2px;
-    background-color: transparent;
-    color: var(--basic-white);
-    text-transform: uppercase;
-    padding: 5px 34px 6px;
-    margin-left: 95px;
+  font-size: 14px;
+  line-height: 21px;
+  border: 2px solid var(--basic-white);
+  border-radius: 2px;
+  background-color: transparent;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  padding: 5px 34px 6px;
+  margin-left: 95px;
 }
 
 .filter-button {
-    font-size: 14px;
-    line-height: 21px;
-    color: var(--basic-white);
-    background: 0 0;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-white);
+  background: 0 0;
+  cursor: pointer;
 }
 
 fieldset {
@@ -752,7 +761,7 @@ fieldset {
 }
 
 .label {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .price-controls .min-price {
@@ -792,7 +801,6 @@ fieldset {
 
 .range-controls {
   position: relative;
-  margin-bottom: 32px;
 }
 
 .range-controls .scale {
@@ -1241,10 +1249,7 @@ iframe {
 }
 
 .social-button {
-  display: inline-block;
-  text-align: center;
-  padding-top: 14px;
-  box-sizing: border-box;
+  display: inline-flex;
   background: var(--basic-blue);
   width: 46px;
   height: 48px;
@@ -1258,6 +1263,10 @@ iframe {
 .social-button:active {
   background: var(--darkest-blue);
   fill-opacity: 0.3;
+}
+
+.social-svg {
+  margin: auto;
 }
 
 .academy-logo {
@@ -1504,7 +1513,7 @@ iframe {
 
 .modal-button:active {
   background-color: var(--darkest-brown);
-  color: 604E43;
+  color: var(--dark-brown);
 }
 
 .hotel-search-button {
